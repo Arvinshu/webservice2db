@@ -19,12 +19,12 @@
 
     <script type="text/javascript">
         function beforeSubmit(form) {
-            if (form.deptname.value == '') {
+            if (form.deptName.value == '') {
                 alert('部门名称为空 ！');
                 form.deptname.focus();
                 return false;
             }
-            if (form.systemname.value == '') {
+            if (form.systemName.value == '') {
                 alert('系统名称为空 ！');
                 form.deptname.focus();
                 return false;
@@ -56,18 +56,18 @@
     <form:form action="/admin/deptsys/updateS" method="post" commandName="deptsysU" role="form" name="form"
                onSubmit="return beforeSubmit(this);">
         <div class="form-group">
-            <label for="deptname">部门名称:</label>
-            <input type="text" class="form-control" id="deptname" name="deptname" placeholder="输入部门名称"
+            <label for="deptName">部门名称:</label>
+            <input type="text" class="form-control" id="deptName" name="deptName" placeholder="输入部门名称"
                    value="${deptsys.deptName}"/>
         </div>
         <div class="form-group">
             <label for="systemName">系统名称:</label>
-            <input type="text" class="form-control" id="systemname" name="systemname" placeholder="输入系统名称"
-                   value="${deptsys.deptName}"/>
+            <input type="text" class="form-control" id="systemName" name="systemName" placeholder="输入系统名称"
+                   value="${deptsys.systemName}"/>
         </div>
         <div class="form-group">
             <label for="createTime">登记时间:</label>
-            <input type="text" class="form-control" id="createtime" name="createtime" value="<%=date%>"/>
+            <input type="text" class="form-control" id="createTime" name="createTime" value="${deptsys.createTime}"/>
         </div>
         <!-- 把 id 一并写入 userP 中 -->
         <input type="hidden" id="id" name="id" value="${deptsys.id}"/>

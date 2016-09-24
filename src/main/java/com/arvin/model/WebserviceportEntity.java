@@ -14,7 +14,10 @@ public class WebserviceportEntity {
     private String wsDesc;
     private String wsName;
     private Date pubDate;
+    private boolean available;
     private DepartmentsystemEntity deptsysByDeptsysId;
+
+
 
     @Id
     @Column(name = "id", nullable = false)
@@ -64,6 +67,16 @@ public class WebserviceportEntity {
 
     public void setPubDate(Date pubDate) {
         this.pubDate = pubDate;
+    }
+
+    @Basic
+    @Column(name = "available", nullable = false)
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     @Override

@@ -114,15 +114,19 @@
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
-    <index id="33" parent="6" name="deptsys_id_idx">
+    <column id="33" parent="6" name="available">
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <index id="34" parent="6" name="deptsys_id_idx">
       <columns>deptsys_id</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="34" parent="6" name="PRIMARY">
+    <key id="35" parent="6" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="35" parent="6" name="deptsys_id">
+    <foreign-key id="36" parent="6" name="deptsys_id">
       <columns>deptsys_id</columns>
       <ref-key>~.departmentsystem.PRIMARY</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>

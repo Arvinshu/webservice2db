@@ -47,13 +47,13 @@
     <hr/>
     <form:form name="form" action="/admin/deptsys/addS" method="post" commandName="deptsys" role="form" onsubmit="return beforeSubmit(this);">
         <div class="form-group">
-            <label for="deptname">部门名称:</label>
-            <input type="text" class="form-control" id="deptname" name="deptname" placeholder="输入部门名称:"/>
+            <label for="deptName">部门名称:</label>
+            <input type="text" class="form-control" id="deptName" name="deptName" placeholder="输入部门名称:"/>
 
         </div>
         <div class="form-group">
-            <label for="systemname">系统名称:</label>
-            <input type="text" class="form-control" id="systemname" name="systemname" placeholder="输入系统名称:"/>
+            <label for="systemName">系统名称:</label>
+            <input type="text" class="form-control" id="systemName" name="systemName" placeholder="输入系统名称:"/>
         </div>
         <div style="text-align: right" class="form-group">
             <button type="submit" class="btn btn-sm btn-success">提交</button>

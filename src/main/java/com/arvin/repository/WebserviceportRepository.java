@@ -15,11 +15,12 @@ import org.springframework.transaction.annotation.Transactional;
 public interface WebserviceportRepository extends JpaRepository<WebserviceportEntity, Integer> {
     @Modifying
     @Transactional
-    @Query("update WebserviceportEntity we set we.wsPort = :qWsport, we.wsDesc = :qWsdesc, we.wsName = :qWsname, we.pubDate = :qPubdate, we.deptsysByDeptsysId.id = :qDeptsysid where we.id = :qId")
+    @Query("update WebserviceportEntity we set we.wsPort = :qWsport, we.wsDesc = :qWsdesc, we.wsName = :qWsname, we.pubDate = :qPubdate, we.available = :qAvailable, we.deptsysByDeptsysId.id = :qDeptsysid where we.id = :qId")
     void updateWsport(@Param("qWsport") String wsport,
                       @Param("qWsdesc") String wsdesc,
                       @Param("qWsname") String wsname,
                       @Param("qPubdate") String pubdate,
+                      @Param("qAvailable") boolean available,
                       @Param("qDeptsysid") Integer deptsysid,
                       @Param("qId") Integer id
                       );

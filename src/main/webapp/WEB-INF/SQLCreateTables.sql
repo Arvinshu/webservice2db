@@ -28,7 +28,8 @@ CREATE TABLE `webserviceport` (
   `ws_desc` varchar(100) NOT NULL,
   `ws_name` varchar(100) DEFAULT NULL,
   `deptsys_id` int(11) NOT NULL,
-  `pub_date` date NOT NULL,
+  `pub_date` datetime NOT NULL,
+  `available` TINYINT(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `deptsys_id_idx` (`deptsys_id`),
   CONSTRAINT `deptsys_id` FOREIGN KEY (`deptsys_id`) REFERENCES `departmentsystem` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -45,7 +46,7 @@ DROP TABLE IF EXISTS `departmentsystem`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `departmentsystem` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dept_departmentsystemdepartmentsystemdepartmentsystemdepartmentsystemdepartmentsystemname` varchar(45) NOT NULL,
+  `dept_name` varchar(45) NOT NULL,
   `system_name` varchar(45) NOT NULL,
   `create_time` datetime NOT NULL,
   PRIMARY KEY (`id`)
