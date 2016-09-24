@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="webservice2db:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="webservice2db:war exploded">
     <output-path>$PROJECT_DIR$/target/webservice</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">

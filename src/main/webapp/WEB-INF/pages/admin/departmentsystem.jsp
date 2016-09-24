@@ -65,14 +65,8 @@
                     </td>
                 </tr>
             </c:forEach>
-            <tr>
-                <td style="text-align: center"></td>
-                <td style="text-align: center"></td>
-                <td style="text-align: center"></td>
-                <td style="text-align: center"></td>
-                <td style="text-align: center"><a href="/admin/deptsys/add" type="button" class="btn btn-primary btn-sm">添加</a></td>
-            </tr>
         </table>
+        <h3 style="text-align: right;"><a href="/admin/deptsys/add" type="button" class="btn btn-primary btn-sm">添加</a></h3>
     </c:if>
 </div>
 
