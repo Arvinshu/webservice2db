@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //如果请求首页，则返回index页面，页面文件格式在dispatcher中定义
 @Controller
 public class MainController {
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
 
     public String index() {
+
         //log.info("Requesting /");
         return "main";
     }

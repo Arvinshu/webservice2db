@@ -1,6 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: shuxi
+  Date: 2016-9-25
+  Time: 15:39
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: shuxi
   Date: 2016-9-10
   Time: 17:40
   To change this template use File | Settings | File Templates.
@@ -9,6 +16,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 
@@ -23,13 +32,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>添加系统</title>
+    <title>添加接口</title>
 
     <script type="text/javascript">
 
         function beforeSubmit(form) {
 
-            if(form.deptName.value=='') {
+            if (form.deptName.value == '') {
 
                 alert("部门名称为空");
 
@@ -38,7 +47,7 @@
                 return false;
             }
 
-            if(form.systemName.value=='') {
+            if (form.systemName.value == '') {
 
                 alert("系统名称为空");
 
@@ -72,22 +81,71 @@
 
     <hr/>
 
-    <form:form name="form" action="/admin/deptsys/addS" method="post" commandName="deptsys" role="form" onsubmit="return beforeSubmit(this);">
+    <form:form name="form" action="/admin/wsport/addW" method="post" commandName="webserviceport" role="form"
+               onsubmit="return beforeSubmit(this);">
 
         <div class="form-group">
 
-            <label for="deptName">部门名称:</label>
+            <label for="deptsysByDeptsysId.id">所属系统:</label>
 
-            <input type="text" class="form-control" id="deptName" name="deptName" placeholder="输入部门名称:"/>
+            <select class="form-control" id="deptsysByDeptsysId.id" name="deptsysByDeptsysId.id">
+
+                <c:forEach items="${deptsysList}" var="deptsystem">
+
+                    <option value="${deptsystem.id}">${deptsystem.systemName}</option>
+
+                </c:forEach>
+
+            </select>
 
         </div>
 
         <div class="form-group">
 
-            <label for="systemName">系统名称:</label>
+            <label for="wsPort">接口:</label>
 
-            <input type="text" class="form-control" id="systemName" name="systemName" placeholder="输入系统名称:"/>
+            <input type="text" class="form-control" id="wsPort" name="wsPort" placeholder="webservice接口"/>
 
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="wsDesc">事项名:</label>
+
+            <input type="text" class="form-control" id="wsDesc" name="wsDesc" placeholder="事项名称"/>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="wsName">表名称:</label>
+
+            <input type="text" class="form-control" id="wsName" name="wsName" placeholder="表名称"/>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="available">接口状态:</label>
+
+            <select class="form-control" id="available" name="available">
+
+                <option value="1" selected="selected">可用</option>
+
+                <option value="0">不可用</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="wsNote">描述:</label>
+
+            <textarea class="form-control" id="wsNote" name="wsNote" rows="3"
+
+                      placeholder="接口描述信息"></textarea>
         </div>
 
         <div style="text-align: center" class="form-group">
@@ -96,7 +154,7 @@
 
             <button type="reset" class="btn btn-sm btn-primary">重置</button>
 
-            <a href="/admin/deptsys/returnS" type="button" class="btn btn-sm btn-warning">返回</a>
+            <a href="/admin/wsport/returnW" type="button" class="btn btn-sm btn-warning">返回</a>
 
         </div>
 
@@ -113,3 +171,4 @@
 </body>
 
 </html>
+

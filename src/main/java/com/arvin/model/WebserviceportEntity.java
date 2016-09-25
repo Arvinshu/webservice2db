@@ -2,6 +2,7 @@ package com.arvin.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by shuxi on 2016-9-10.
@@ -13,8 +14,9 @@ public class WebserviceportEntity {
     private String wsPort;
     private String wsDesc;
     private String wsName;
-    private Date pubDate;
+    private Timestamp pubDate;
     private boolean available;
+    private String wsNote;
     private DepartmentsystemEntity deptsysByDeptsysId;
 
 
@@ -61,11 +63,11 @@ public class WebserviceportEntity {
 
     @Basic
     @Column(name = "pub_date", nullable = false)
-    public Date getPubDate() {
+    public Timestamp getPubDate() {
         return pubDate;
     }
 
-    public void setPubDate(Date pubDate) {
+    public void setPubDate(Timestamp pubDate) {
         this.pubDate = pubDate;
     }
 
@@ -77,6 +79,16 @@ public class WebserviceportEntity {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    @Basic
+    @Column(name = "ws_note", length = 255)
+    public String getWsNote() {
+        return wsNote;
+    }
+
+    public void setWsNote(String wsNote) {
+        this.wsNote = wsNote;
     }
 
     @Override

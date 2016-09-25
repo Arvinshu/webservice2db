@@ -86,19 +86,19 @@
 
 <h3 style="text-align: center"></h3>
 
-<div id="showCurrentTime"></div>
-
 <div style="text-align: center" class="alert alert-success" role="alert">
 
     <a href="/admin/deptsys"><strong>部门系统管理</strong></a> -访问部门系统管理页面.
 
 </div>
 
-<div style="text-align: center" class="alert alert-info" role="alert">
+<div style="text-align: center" class="alert alert-info" role= "alert">
 
     <a href="/admin/wsport"><strong>数据接口管理</strong></a> -访问数据接口管理页面.
 
 </div>
+
+<div style="text-align: center" id="showCurrentTime"></div>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>

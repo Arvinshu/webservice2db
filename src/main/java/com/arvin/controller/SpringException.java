@@ -15,6 +15,8 @@ public class SpringException extends RuntimeException {
     }
 
     public void setExceptionMsg (String exceptionMsg) {
+
         this.exceptionMsg = exceptionMsg;
+
     }
 }
