@@ -70,7 +70,7 @@
 
             var num;
 
-            str > 10 ? num = str : num = "0" + str;
+            str >= 10 ? num = str : num = "0" + str;
 
             return num;
 

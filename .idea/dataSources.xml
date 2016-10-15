@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="MySQL - webservice2db" uuid="1b9d31c9-a396-4f05-a6a8-eee3e12040a7">
+    <data-source source="LOCAL" name="hibernate.xml/Hibernate" uuid="48719134-e94b-4755-a4fe-670d4e35c804">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/src/main/resources/hibernate.xml</remarks>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://mysql:3306/springmvc?serverTimezone=UTC&amp;amp;autoReconnect=true&amp;amp;useSSL=true</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/springmvc?serverTimezone=UTC&amp;autoReconnect=true&amp;useSSL=true</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

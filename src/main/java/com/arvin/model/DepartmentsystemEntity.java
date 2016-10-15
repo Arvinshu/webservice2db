@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * entity
@@ -23,6 +25,9 @@ public class DepartmentsystemEntity {
     private String systemName;
 
     private Timestamp createTime;
+
+    private Set<WebserviceportEntity> webserviceportEntities = new HashSet<WebserviceportEntity>();
+    //private WebserviceportEntity wsportBywsportId;
 
     @Id
     @Column(name = "id", nullable = false)
@@ -98,4 +103,16 @@ public class DepartmentsystemEntity {
 
         return result;
     }
+
+    /*
+    @OneToMany(mappedBy = "deptsysByDeptsysId")
+    @JoinColumn(name = "wsport_id", referencedColumnName = "id", nullable = false)
+    public Set<WebserviceportEntity> getWebserviceportEntities() {
+        return webserviceportEntities;
+    }
+
+    public void setWebserviceportEntities(Set<WebserviceportEntity> webserviceportEntities) {
+        this.webserviceportEntities = webserviceportEntities;
+    }
+    */
 }

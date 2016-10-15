@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.dameng">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Environment/Maven/local/com.dameng.common_4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Environment/Maven/local/com.dameng.etl.api_4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Environment/Maven/local/com.dameng.etl.driver_4.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
